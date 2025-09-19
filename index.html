@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>🇧🇩 Bangla OCR Project</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🇧🇩 Bangla OCR Web</h1>
+    <p>Upload Bangla text images or PDFs, choose OCR engine, and extract text instantly.</p>
+
+    <form id="uploadForm">
+      <input type="file" id="fileInput" required>
+      <select id="engineSelect">
+        <option value="tesseract">Tesseract</option>
+        <option value="easyocr">EasyOCR</option>
+      </select>
+      <button type="submit">🚀 Extract OCR</button>
+    </form>
+
+    <div id="loading" class="hidden">⏳ Please wait, processing OCR...</div>
+
+    <h2>📝 OCR Result</h2>
+    <textarea id="output" readonly></textarea><br>
+
+    <button id="downloadBtn" class="hidden">💾 Download Result</button>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
